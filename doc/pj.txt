@@ -1,0 +1,76 @@
+*pj.vim* A tool for managing units of your work
+
+Version: 0.0.1
+Author: tennashi <tennashio@gmail.com>
+License: MIT
+
+==============================================================================
+CONTENTS                                                       *pj-contents*
+
+INTRODUCTION                              |pj-introduction|
+INSTALL                                   |pj-install|
+INTERFACE                                 |pj-interface|
+  COMMANDS                                  |pj-commands|
+  DENITE SOURCES                            |pj-denite-sources|
+  DENITE KINDS                              |pj-denite-kinds|
+
+==============================================================================
+INTRODUCTION                                               *pj-introduction*
+
+The vim/neovim interface for *pj* (https://github.com/tennashi/pj), a units of your work management tool.
+
+This plugin is implemented as a custom source/kind of denite.nvim (https://github.com/Shougo/denite.nvim).
+
+==============================================================================
+INSTALL                                                         *pj-install*
+
+1. Install denite.nvim. (https://github.com/Shougo/denite.nvim)
+2. Install pj command. (https://github.com/tennashi/pj)
+>
+    $ go get github.com/tennashi/pj
+<
+
+3. Install pj.vim
+
+* vim-plug(https://github.com/junegunn/vim-plug)
+>
+    Plug 'tennashi/pj.vim'
+<
+
+* dein.vim(https://github.com/Shougo/dein.vim)
+>
+    call dein#add('tennashi/pj.vim')
+<
+
+==============================================================================
+INTERFACE                                                     *pj-interface*
+
+------------------------------------------------------------------------------
+COMMANDS                                                       *pj-commands*
+
+:PJInit                                                           *:PJInit*
+	Initialize the project.
+
+------------------------------------------------------------------------------
+DENITE SOURCES                                           *pj-denite-sources*
+
+                                                       *pj-denite-source-pj*
+pj	List projects and change the current project to the selected project.
+
+------------------------------------------------------------------------------
+DENITE KINDS                                               *pj-denite-kinds*
+
+                                                         *pj-denite-kind-pj*
+pj	An interface to manage projects.
+
+		action__project		(String)	(Required)
+			Target project name.
+
+                                                 *pj-denite-kind-pj-actions*
+		change (default)
+			Change the current project to the selected project.
+			And change the vim current directory to the current
+			workspace of the selected project.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
