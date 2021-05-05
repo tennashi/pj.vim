@@ -25,7 +25,8 @@ class Source(Base):
                     self.syntax_name, syn['name'], syn['link']))
 
     def gather_candidates(self, context: UserContext) -> Candidates:
-        cmd = ['pj', '-o', 'json', 'list']
+        cmd_path = self.vim.eval('g:pj_command_path')
+        cmd = [cmd_path, '-o', 'json', 'list']
         result = subprocess.run(cmd, stdout=subprocess.PIPE)
         projects = json.loads(result.stdout.decode('utf-8'))
 

@@ -11,6 +11,7 @@ class Kind(Base):
 
     def action_change(self, context: UserContext) -> None:
         target = context['targets'][0]
-        cmd = ['pj', '-o', 'json', 'change', target['action__project']]
+        cmd_path = self.vim.eval('g:pj_command_path')
+        cmd = [cmd_path, '-o', 'json', 'change', target['action__project']]
         subprocess.run(cmd)
         self.vim.call('denite#util#cd', target['action__path'])

@@ -11,6 +11,7 @@ INTRODUCTION                              |pj-introduction|
 INSTALL                                   |pj-install|
 INTERFACE                                 |pj-interface|
   COMMANDS                                  |pj-commands|
+  VARIABLES                                 |pj-variables|
   DENITE SOURCES                            |pj-denite-sources|
   DENITE KINDS                              |pj-denite-kinds|
 
@@ -50,6 +51,13 @@ COMMANDS                                                       *pj-commands*
 
 :PJInit                                                           *:PJInit*
 	Initialize the project.
+
+------------------------------------------------------------------------------
+VARIABLES                                                     *pj-variables*
+
+g:pj_command_path                                        *g:pj_command_path*
+	The executable path for pj command.  The default is
+	/path/to/pj.vim/bin/pj.
 
 ------------------------------------------------------------------------------
 DENITE SOURCES                                           *pj-denite-sources*
