@@ -52,6 +52,10 @@ COMMANDS                                                       *pj-commands*
 :PJInit                                                           *:PJInit*
 	Initialize the project.
 
+:PJInstall                                                      *:PJInstall*
+	Install the pj command.  The path to install is specified by
+	|g:pj_command_path|.
+
 ------------------------------------------------------------------------------
 VARIABLES                                                     *pj-variables*
 
