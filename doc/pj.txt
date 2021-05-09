@@ -67,7 +67,12 @@ g:pj_command_path                                        *g:pj_command_path*
 DENITE SOURCES                                           *pj-denite-sources*
 
                                                        *pj-denite-source-pj*
-pj	List projects and change the current project to the selected project.
+pj		List projects and change the current project to the selected
+		project.
+
+                                             *pj-denite-source-pj/workspace*
+pj/workspace	List workspaces and change the current directory to the
+		selected workspace path.
 
 ------------------------------------------------------------------------------
 DENITE KINDS                                               *pj-denite-kinds*
