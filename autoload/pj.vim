@@ -1,3 +1,11 @@
+function! pj#cd(project) abort
+  if a:project ==# "current"
+    let l:stdout = system(g:pj_command_path .. ' -o json current')
+    let l:res = json_decode(l:stdout)
+    call chdir(l:res['currentWorkspace'])
+  endif
+endfunction
+
 function! pj#init() abort
   let l:stdout = system(g:pj_command_path .. ' -o json init')
   let l:res = json_decode(stdout)
