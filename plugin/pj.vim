@@ -15,6 +15,7 @@ if !executable(g:pj_command_path)
 endif
 
 command! PJInit call pj#init()
+command! PJCommandUpgrade call pj#upgrade_command()
 
 if g:pj_auto_cd
   augroup PJAutoCd

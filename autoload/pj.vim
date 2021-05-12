@@ -44,3 +44,10 @@ function! pj#install_command() abort
 
   return
 endfunction
+
+function! pj#upgrade_command() abort
+  let l:stdout_lines = systemlist(g:pj_command_path .. ' self-upgrade')
+  for l:line in l:stdout_lines
+    echom '[pj] ' .. l:line
+  endfor
+endfunction

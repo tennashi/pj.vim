@@ -56,6 +56,10 @@ COMMANDS                                                       *pj-commands*
 	Install the pj command.  The path to install is specified by
 	|g:pj_command_path|.
 
+:PJCommandUpgrade                                        *:PJCommandUpgrade*
+	Upgrade the pj command.  The path to upgrade is specified by
+	|g:pj_command_path|.
+
 ------------------------------------------------------------------------------
 VARIABLES                                                     *pj-variables*
 
