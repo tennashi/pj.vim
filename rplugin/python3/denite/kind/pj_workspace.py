@@ -1,0 +1,18 @@
+from denite.base.kind import Base
+from denite.util import UserContext, Nvim
+import subprocess
+
+
+class Kind(Base):
+    def __init__(self, vim: Nvim) -> None:
+        super().__init__(vim)
+        self.name = 'pj/workspace'
+        self.default_action = 'change'
+
+    def action_change(self, context: UserContext) -> None:
+        target = context['targets'][0]
+        cmd_path = self.vim.eval('g:pj_command_path')
+        cmd = [cmd_path, '-o', 'json', 'workspace', 'change',
+               target['action__workspace']]
+        subprocess.run(cmd)
+        self.vim.call('denite#util#cd', target['action__path'])
